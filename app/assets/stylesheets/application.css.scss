@@ -1,0 +1,203 @@
+/*
+
+ *= require_self
+ *= require 'static_pages'
+ *= require 'users'
+ *= require 'openings'
+ *= require 'animate'
+
+	// require_tree .
+	// don't because includes files alphabetically
+
+ */
+
+$deepblue: #031c2f;
+$offwhite: #eeeeee;
+$flatred: #e74c3c;
+$flatorange: #e87e04;
+
+$densegray: #384047;
+$chillgray: #3d596e;
+$chillergray: #6a8090;
+$chillestgray: #b2c3c7;
+
+$lightgreen: #91e691;
+$emeraldgreen: #2ecc71;
+$nefgreen: #27ae60;
+
+a, h1, h2, h3, h4, p, nav, li, ul, label, button, input, select, textarea, body, html, .pure-g [class*="pure-u"] {
+	font-family: 'Ubuntu', sans-serif !important;
+	text-transform: lowercase !important;
+	text-decoration: none !important;
+	// no underlines
+	outline: 0 !important;
+	// no dotted outline around links
+	// color: $chillgray;
+}
+
+/* random small things */
+
+#chicken {
+	color: $emeraldgreen;
+	:hover {
+		color: $lightgreen;
+	}
+}
+
+.noshow {
+	display: none !important;
+}
+
+#header-icon, #header-icon * {
+	height: 30px;
+	margin: 0;
+	padding: 0;
+}
+
+.pad-header {
+	margin-bottom: 100px;
+}
+
+.pad-up {
+	margin-top: 30px;
+}
+
+.pad-down {
+	margin-bottom: 30px;
+}
+
+.is-center {
+	text-align: center;
+}
+
+.shadow-light {
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.pure-button {
+	text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+a.pure-button-primary, button.pure-button-primary {
+	background: $emeraldgreen;
+	font-size: 150%;
+	color: #fff;
+	width: 180px;
+	&.back-color {
+		background: $flatorange;
+		margin-right: 10px;
+	}
+}
+
+/* menu styles */
+
+.home-menu {
+	padding: 0.5em;
+	text-align: center;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+	/* ul {float: right;} */
+}
+
+.home-menu.pure-menu-open {
+	background: $deepblue;
+}
+
+.pure-menu.pure-menu-open.pure-menu-fixed {
+	border-bottom: none;
+}
+
+.home-menu .pure-menu-heading {
+	color: #fff;
+	font-weight: 400;
+	font-size: 120%;
+}
+
+.home-menu .pure-menu-selected a {
+	color: $lightgreen;
+}
+
+.home-menu a {
+	color: $offwhite;
+}
+
+.home-menu li a:hover, .home-menu li a:focus {
+	background: none;
+	border: none;
+	color: $lightgreen;
+	-webkit-transition: all 0.2s ease-out;
+	-moz-transition: all 0.2s ease-out;
+	-ms-transition: all 0.2s ease-out;
+	-o-transition: all 0.2s ease-out;
+	transition: all 0.2s ease-out;
+}
+
+// shrink header label width in small screen
+@media (max-width: 35.5em) {
+	.pure-menu a, .pure-menu li a, .pure-menu .pure-menu-heading {
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+	a.pure-button-primary.back-color {
+		margin-bottom: 10px;
+		margin-right: 0;
+	}
+	.pad-header {
+		margin-bottom: 60px;
+	}
+}
+
+/* general styles */
+
+body {
+	background: $offwhite;
+	font-weight: 300;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	color: $deepblue;
+}
+
+strong, b {
+	font-weight: 600;
+}
+
+h1 {
+	font-size: 55px;
+	letter-spacing: 1px;
+	line-height: 60px;
+	margin: 25px 0;
+	color: #fff;
+	text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+	font-size: 40px;
+	font-weight: 600;
+	margin: 15px 0;
+}
+
+h3 {
+	font-size: 16px;
+	margin: 10px 0;
+	font-weight: 600;
+}
+
+h4 {
+	font-size: 20px;
+	margin: 10px 0;
+}
+
+h5 {
+	font-size: 16px;
+	font-weight: 500;
+	margin: 15px 0;
+	color: #fff;
+}
+
+h6 {
+	font-size: 16px;
+	font-weight: 600;
+	margin: 10px 0;
+	color: $densegray;
+}

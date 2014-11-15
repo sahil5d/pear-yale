@@ -1,0 +1,29 @@
+<div class="home-menu pure-menu pure-menu-open pure-menu-horizontal pure-menu-fixed">
+	
+	<%= link_to "pear | yale", root_path, class: "pure-menu-heading" %>
+
+	<%= link_to image_tag(asset_path 'pear5small.png', :border => 0), root_path, id: 'header-icon', class: 'pure-menu-heading' %>
+
+	<ul>
+		<% action = params[:action] %>
+		<% loggedin = session[:cas_user] %>
+
+		<% if loggedin %>
+
+		<li class="<%= 'pure-menu-selected animated fadeIn' if action=='show' %>">
+			<%= link_to "profile", '/profile' %>
+		</li>
+
+		<li class="<%= 'pure-menu-selected animated fadeIn' if action=='new' %>">
+			<%= link_to "planner", '/planner' %>
+		</li>
+
+		<li class="<%= 'pure-menu-selected animated fadeIn' if action=='index' %>">
+			<%= link_to "openings", '/openings' %>
+		</li>
+
+		<% end %>
+
+	</ul>
+
+</div>

@@ -1,0 +1,14 @@
+$emeraldgreen: #2ecc71;
+$lightgreen: #91e691;
+
+h4 ~ p {
+	font-size: 15px;
+	margin-bottom: 20px;
+	line-height: 180%;
+}
+
+code {
+	color: $emeraldgreen;
+	font-weight: bold;
+	background: #fff;
+}

@@ -1,0 +1,175 @@
+<% provide(:title, "yale")%>
+
+<div class="preloader"></div>
+
+<!-- ******************** MASTHEAD SECTION ******************** -->	
+<main id="top" class="masthead" role="main">
+	<div class="container">
+		<img class="logo" src="<%= asset_path 'logo5blue.png' %>">
+
+		<h1 id="motto"><em>eat different</em>.</h1>
+
+		<div class="home-pad">
+			<%= link_to "get started", '/profile', class: "pure-button pure-button-primary" %>
+
+			<h5><strong><%=@nUser%></strong> students now signed up</h5>
+		</div>
+
+		<a href="#explore" class="scrollto">
+			<p class="scrollto--arrow"><img src="<%=asset_path 'scrollDown.png' %>"></p>
+		</a>
+
+	</div> <!--/container -->
+</main> <!--/main -->
+
+
+<!-- ******************** FEATURES ******************** -->	
+<div class="container" id="explore">
+
+	<div class="section-title">
+		<h2>silence is golden</h2>
+		<h4>but sometimes it's not</h4>
+	</div>
+
+	<section class="row heroimg breath">
+		<div class="col-md-12 text-center">
+			<iframe id="vimeovid" src="//player.vimeo.com/video/111331100?title=0&amp;byline=0&amp;portrait=0" width="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+		</div>
+	</section>
+
+</div>
+
+<div class="highlight">
+	<div class="container">
+	
+		<div class="section-title">
+			<h2>what is <em>pear</em> ?</h2>
+			<h4>a delicious lunch-pairing web app</h4>
+		</div>
+		<div class="row breath features aligncentercomfortable">
+			<h3>for when you want to get to know someone new</h3>
+			<h3>for when you're a freshman eager to meet new faces</h3>
+			<h3>for when you're an upperclassman who wants to feel like a freshman again</h3>
+			<h3>for when you'd rather not have a lunch date with your laptop</h3>
+			<h3>for when you're hungry dammit</h3>
+		</div>
+
+	</div>
+</div>
+
+<div class="container">
+
+	<div class="section-title">
+		<h2>why <em>pear</em> ?</h2>
+		<h4>try these three</h4>
+	</div>
+	
+	<section class="row breath features">
+
+		<div class="col-md-4">
+			<div class="bubble color1">
+				<div class="icontitle"><i class="fa fa-check-square-o"></i> simple</div>
+				<div class="iconblurb">choose <em>when</em> and <em>where</em> you're free</div>
+			</div><!--/bubble -->
+		</div><!--/col-md-4-->
+		
+		<div class="col-md-4">
+			<div class="bubble color2">
+				<div class="icontitle"><i class="fa fa-rocket"></i> spontaneous</div>
+				<div class="iconblurb">meet someone new over a meal</div>
+			</div><!--/bubble -->
+		</div><!--/col-md-4-->
+		
+		<div class="col-md-4">
+			<div class="bubble color3">
+				<div class="icontitle"><i class="fa fa-fire"></i> sexy</div>
+				<div class="iconblurb">kind of. it also starts with an <em>s</em></div>
+			</div><!--/bubble -->
+		</div><!--/col-md-4-->
+	</section><!-- /section -->
+
+</div><!--/container -->
+
+<!-- ******************** snarkquotes SECTION ******************** -->	
+<div class="highlight snarkquotes">
+	<div class="container">
+		<div class="section-title">
+			<h2>what do yalies think of <em>pear</em> ?</h2>
+			<h4>is it <em>yalies</em> or <em>yalers</em> ?</h4>
+		</div>
+		
+		<section class="row breath">
+			<div class="col-md-6">
+				<div class="testblock">yalies are hella cool. i'm going to use this to meet a bunch of new people, or just make lunches interesting again</div>
+				<div class="clientblock">
+					<img src="<%=asset_path 'yalie1.jpg' %>">
+					<p><strong>david mcpeek</strong> <br>
+						bk '16
+					</p>
+				</div>
+			</div><!--/col-md-6 -->
+
+			<div class="col-md-6">
+				<div class="testblock">this is a really cool concept. personally, i would have called this thing 'kiwi,' or 'passionfruit,' or 'kumquat'</div>
+				<div class="clientblock">
+					<img src="<%=asset_path 'yalie2.jpg' %>">
+					<p><strong>henok addis</strong> <br>
+						es '17
+					</p>
+				</div>
+			</div><!--/col-md-6 -->
+		</section><!--/section -->
+
+	</div><!--/container -->
+</div><!--/highlight snarkquotes -->
+
+<!-- ******************** FAQ ******************** -->
+<div class="container">
+
+	<div class="section-title">
+		<h2>faq</h2>
+		<h4>and answers</h4>
+	</div>
+	
+	<section class="row faq breath">
+		<div class="col-md-6">
+			<h6>who are you?</h6>
+			<p>i'm sahil gupta, sy '17, a yalie who loves people, food, and surprise. credit also goes to jenny allen, tc '16, who worked with me to conceptualize and code the first version of the app this summer</p>
+			<h6>does <em>pear</em>&nbsp; work on my phone?</h6>
+			<p><em>pear</em> is purely a website so it works on your iphone, android, laptop, ...</p>
+			<h6>is <em>pear</em>&nbsp; just for undergrads?</h6>
+			<p>yes for now. if you're a super-senior or the like, shoot me an email to join</h6>
+		</div><!--/col-md-6 -->
+		
+		<div class="col-md-6">
+			<h6>why did you make the site?</h6>
+			<p>however small the yale bubble, students don't get to know a lot of their fellow yalies. by encouraging chance encounters, i hope to help yalies connect</p>
+			<h6>how do you pair students?</h6>
+			<p>with a depth-first search algorithm that matches students who are free at a common time and place, all while maximizing the total number of matches</p>
+			<h6>feedback | questions?</h6>
+			<p>reach me at <a href="mailto:pear.yale@gmail.com?subject=feedback">pear.yale@gmail.com</a>. i'll get back to you on the same day</p>
+		</div><!--/col-md-6 -->
+	</section><!--/section faq -->
+
+</div><!--/container -->
+
+<!-- ******************** FOOTER ******************** -->
+
+<main class="footercta">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 breath text-center">
+				<a href="#top" class="pure-button pure-button-primary gototop">get started</a>
+			</div>
+		</div>
+	</div><!--/container -->
+</main><!--/main -->
+		
+<div class="container">
+
+	<section class="row breath text-center">
+		<img src="<%=asset_path 'pear5small.png' %>" height="50px">
+		by <strong>sahil gupta</strong>
+	</section>
+
+</div><!--/container -->

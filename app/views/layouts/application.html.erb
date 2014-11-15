@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <!-- google search tags -->
+  <meta name="description" content="eat different."/>
+  <!-- facebook share tags -->
+  <meta property="og:title"       content="pear | yale"/>
+  <meta property="og:site_name"   content="pear | yale"/>
+  <meta property="og:url"         content="http://www.pearyale.com"/>
+  <meta property="og:description" content="eat different."/>
+  <meta property="og:image"      content="http://cdn.pearyale.com/pearFB.jpg"/>
+
+  <title>pear | <%= yield(:title) %></title>
+
+  <!-- pure + normalize css -->
+  <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
+  <!-- bootstrap css -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <!-- app css -->
+  <%= stylesheet_link_tag "application", media: "all",
+                          "data-turbolinks-track" => true %>
+  <!-- google font -->
+  <link href='http://fonts.googleapis.com/css?family=Ubuntu:300' rel='stylesheet' type='text/css'>
+
+  <!-- pear favicon -->
+  <%= favicon_link_tag "favicon.ico" %>
+
+  <%= csrf_meta_tags %>
+</head>
+
+
+<body class="preload">
+
+  <%= render 'layouts/header' %>
+
+  <%= yield %>
+
+  <!-- BELOW THE FOLD CSS|JS -->
+
+  <!-- fontawesome css -->
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+  <!-- pure grid css-->
+  <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/grids-responsive-min.css">
+
+  <!-- jquery js -->
+  <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <!-- bootstrap js -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  <!-- app js -->
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+
+</body>
+
+</html>

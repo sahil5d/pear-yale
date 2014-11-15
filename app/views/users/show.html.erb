@@ -1,0 +1,35 @@
+<% provide(:title, "profile")%>
+
+<div class="pad-header"></div>
+
+<div class="pure-g animated fadeIn">
+	<h2 class="pure-u-1 is-center animated flipInX">
+		hey <%=@user.fname.downcase %>!
+	</h2>
+
+	<h3 class="pure-u-1 is-center pad-down">
+		<%= @user.email %>
+	</h3>
+
+	<div class="pure-u-1-6"></div>
+	<div class="pure-u-2-3">
+		<div class="pure-u-1 pure-u-md-2-3">
+			<h4>couple of things –</h4>
+			<br>
+			<p>on the next page you can choose times and places you're free, for any day this week</p>
+			<p>the evening before, <em>pear</em> matches and emails you and your lunch buddy</p>
+			<p>the more openings you list, the more likely a match</p>
+			<p>you're peared for at most 1 lunch a day</p>
+		</div>
+		<div class="pure-u-1 pure-u-md-1-24"></div>
+		<div class="pure-u-1 pure-u-md-1-4">
+			<img class="pure-img shadow-light" src="<%=asset_path 'paint1.jpg' %>">
+		</div>
+	</div>
+	<div class="pure-u-1-6"></div>
+
+	<div class="pure-u-1 is-center pad-up pad-down">
+		<a href='/planner' class="pure-button pure-button-primary iconright">go<i class="fa fa-angle-right"></i></a>
+	</div>
+
+</div>

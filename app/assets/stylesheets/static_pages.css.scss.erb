@@ -1,0 +1,536 @@
+// Place all the styles related to the Static_Pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+// background images
+//= depend_on_asset "plate2center.jpg"
+//= depend_on_asset "samplemap2.png"
+
+$deepblue: #031c2f;
+$offwhite: #eeeeee;
+
+$densegray: #384047;
+$chillgray: #3d596e;
+$chillergray: #6a8090;
+$chillestgray: #b2c3c7;
+
+$lightgreen: #91e691;
+$emeraldgreen: #2ecc71;
+
+.preloader {
+	background-color: $offwhite;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	z-index: 9999999;
+}
+
+.pace {
+	-webkit-pointer-events: none;
+	pointer-events: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
+	z-index: 9999999;
+	position: fixed;
+	margin: auto;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height: 2px;
+	width: 100%;
+	background: $offwhite;
+}
+
+.pace .pace-progress {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-transition: width 1s ease-in-out 1s linear;
+	-moz-transition: width 1s ease-in-out 1s linear;
+	-ms-transition: width 1s ease-in-out 1s linear;
+	-o-transition: width 1s ease-in-out 1s linear;
+	transition: width 1s ease-in-out 1s linear;
+	-webkit-transform: translate3d(0, 0, 0);
+	-moz-transform: translate3d(0, 0, 0);
+	-ms-transform: translate3d(0, 0, 0);
+	-o-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+	max-width: 100%;
+	position: fixed;
+	z-index: 9999999;
+	display: block;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	height: 100%;
+	background: $chillgray;
+}
+
+.pace.pace-inactive {
+	display: none;
+}
+
+.breath {
+	margin: 50px auto;
+}
+
+.highlight {
+	background: $chillestgray;
+	margin-top: 40px;
+	padding-bottom: 30px;
+}
+
+.masthead {
+	position: relative;
+	padding: 80px 15px;
+	color: #fff;
+	text-align: center;
+	text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+	background-image:url(<%=asset_path 'plate2center.jpg' %>);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-attachment: fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+.masthead .container {
+	animation: fadein 2s;
+	-moz-animation: fadein 2s;
+	-webkit-animation: fadein 2s;
+	-o-animation: fadein 2s;
+}
+
+.home-pad {
+	margin-top: 60px;
+	margin-bottom: 60px;
+}
+
+#motto {
+	text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+h6 ~ p {
+	line-height: 180%;
+}
+
+.loading * {
+	-webkit-animation: none !important;
+	-moz-animation: none !important;
+	-ms-animation: none !important;
+	-o-animation: none !important;
+}
+
+@keyframes fadein {
+	from {
+		opacity: 0;
+		-webkit-transform: translateY(-30px);
+		-moz-transform: translateY(-30px);
+		transform: translateY(-30px);
+	}
+	to {
+		opacity: 1;
+		-webkit-transform: translateY(0);
+		-moz-transform: translateY(0);
+		transform: translateY(0);
+	}
+}
+
+
+@-moz-keyframes fadein {
+	/* Firefox */
+	from {
+		opacity: 0;
+		-webkit-transform: translateY(-30px);
+		-moz-transform: translateY(-30px);
+		transform: translateY(-30px);
+	}
+	to {
+		opacity: 1;
+		-webkit-transform: translateY(0);
+		-moz-transform: translateY(0);
+		transform: translateY(0);
+	}
+}
+
+
+@-webkit-keyframes fadein {
+	/* Safari and Chrome */
+	from {
+		opacity: 0;
+		-webkit-transform: translateY(-30px);
+		-moz-transform: translateY(-30px);
+		transform: translateY(-30px);
+	}
+	to {
+		opacity: 1;
+		-webkit-transform: translateY(0);
+		-moz-transform: translateY(0);
+		transform: translateY(0);
+	}
+}
+
+
+@-o-keyframes fadein {
+	/* Opera */
+	from {
+		opacity: 0;
+		-webkit-transform: translateY(-30px);
+		-moz-transform: translateY(-30px);
+		transform: translateY(-30px);
+	}
+	to {
+		opacity: 1;
+		-webkit-transform: translateY(0);
+		-moz-transform: translateY(0);
+		transform: translateY(0);
+	}
+}
+
+
+/*animation ends*/
+
+.logo {
+	width: 400px;
+	padding-top: 80px;
+}
+
+/* Boucing Arrow Animation */
+
+@keyframes arrowbounce {
+	from {
+		-webkit-transform: translateY(0);
+		-moz-transform: translateY(0);
+		transform: translateY(0);
+	}
+	to {
+		-webkit-transform: translateY(-20px);
+		-moz-transform: translateY(-20px);
+		transform: translateY(-20px);
+	}
+}
+
+
+@-moz-keyframes arrowbounce {
+	/* Firefox */
+	from {
+		-webkit-transform: translateY(0);
+		-moz-transform: translateY(0);
+		transform: translateY(0);
+	}
+	to {
+		-webkit-transform: translateY(-20px);
+		-moz-transform: translateY(-20px);
+		transform: translateY(-20px);
+	}
+}
+
+
+@-webkit-keyframes arrowbounce {
+	/* Safari and Chrome */
+	from {
+		-webkit-transform: translateY(0);
+		-moz-transform: translateY(0);
+		transform: translateY(0);
+	}
+	to {
+		-webkit-transform: translateY(-20px);
+		-moz-transform: translateY(-20px);
+		transform: translateY(-20px);
+	}
+}
+
+
+@-o-keyframes arrowbounce {
+	/* Opera */
+	from {
+		-webkit-transform: translateY(0);
+		-moz-transform: translateY(0);
+		transform: translateY(0);
+	}
+	to {
+		-webkit-transform: translateY(-20px);
+		-moz-transform: translateY(-20px);
+		transform: translateY(-20px);
+	}
+}
+
+
+.scrollto, .scrollto:hover {
+	margin: 30px;
+	display: block;
+	text-decoration: none;
+	width: 200px;
+	margin: 0 auto;
+}
+
+.scrollto--arrow {
+	padding: 10px;
+}
+
+.scrollto--arrow img {
+	animation: arrowbounce 1s alternate infinite;
+	-moz-animation: arrowbounce 1s alternate infinite;
+	/* Firefox */
+	-webkit-animation: arrowbounce 1s alternate infinite;
+	/* Safari and Chrome */
+	-o-animation: arrowbounce 1s alternate infinite;
+	/* Opera */
+}
+
+/*========== 3. HERO IMAGE ==============*/
+
+.section-title {
+	text-align: center;
+	margin-top: 60px;
+	margin-bottom: 30px;
+}
+
+.section-title h2 {
+	color: $chillgray;
+}
+
+.section-title h4 {
+	color: $chillergray;
+}
+
+.heroimg img, .clientlogo img {
+	max-width: 100%;
+}
+
+/*========== 4. FEATURES ==============*/
+
+.features {
+	margin: 25px 0;
+}
+
+.aligncentercomfortable {
+	text-align: center;
+	& h3 {
+		line-height: 160%;
+	}
+}
+
+/*========== 5. snarkquotes ==============*/
+
+.testblock {
+	width: 100%;
+	height: auto;
+	padding: 20px;
+	background: $offwhite;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	font-family: Georgia, Times, "Times New Roman", serif;
+	font-style: italic;
+	position: relative;
+	line-height: 28px;
+	font-size: 16px;
+}
+
+.testblock:after {
+	top: 100%;
+	left: 20%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+	border-color: rgba(255, 255, 255, 0);
+	border-top-color: $offwhite;
+	border-width: 15px;
+	margin-left: -15px;
+}
+
+.clientblock {
+	margin-top: 40px;
+	margin-left: 10px;
+}
+
+.clientblock img {
+	float: left;
+	-webkit-border-radius: 100%;
+	-moz-border-radius: 100%;
+	border-radius: 100%;
+}
+
+.clientblock p {
+	padding-left: 80px;
+	padding-top: 13px;
+}
+
+.clientblock p strong {
+	color: $densegray;
+	font-size: 16px;
+}
+
+/* Animation */
+
+.testblock {
+	-moz-transition: all 0.6s ease;
+	-webkit-transition: all 0.6s ease;
+	-ms-transition: all 0.6s ease;
+	-o-transition: all 0.6s ease;
+	transition: all 0.6s ease;
+}
+
+.testblock:hover {
+	-moz-transform: scale(1.05);
+	-webkit-transform: scale(1.05);
+	-o-transform: scale(1.05);
+	-ms-transform: scale(1.05);
+	transform: scale(1.05);
+	z-index: 2;
+}
+
+/*========== 6. icons AND bubble ==============*/
+
+.bubble {
+	padding: 20px;
+	color: #fff;
+	text-align: center;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+.bubble .icontitle {
+	font-size: 36px;
+	font-weight: 300;
+	margin: 10px 0;
+}
+
+a.iconleft i {
+	margin-right: 10px;
+}
+
+a.iconright i, button.iconright i {
+	margin-left: 10px;
+}
+
+.bubble .iconblurb {
+	font-size: 16px;
+	font-weight: 200;
+	color: #fff;
+	opacity: 0.7;
+}
+
+//3 uniq shades
+.color1 {
+	background-color: #2ecc71;
+}
+
+.color2 {
+	background-color: #1abc9c;
+}
+
+.color3 {
+	background-color: #16a085;
+}
+
+/* Animation */
+
+.bubble {
+	-moz-transition: all 0.6s ease;
+	-webkit-transition: all 0.6s ease;
+	-ms-transition: all 0.6s ease;
+	-o-transition: all 0.6s ease;
+	transition: all 0.6s ease;
+}
+
+.bubble:hover {
+	-moz-transform: scale(1.05);
+	-webkit-transform: scale(1.05);
+	-o-transform: scale(1.05);
+	-ms-transform: scale(1.05);
+	transform: scale(1.05);
+	z-index: 2;
+}
+
+/*========== 7. FAQ ==============*/
+
+.faq p {
+	margin-bottom: 25px;
+}
+
+/*==========8. FOOTER ==============*/
+
+.footercta {
+	padding: 60px 15px;
+	text-align: center;
+	text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+	background-color: $lightgreen;
+	background-image:url(<%=asset_path 'samplemap2.png' %>);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-attachment: fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+.footerlinks {
+	text-align: center;
+}
+
+/*==========9. CUSTOM MEDIA QUERIES==============*/
+
+/*MEDIA QUERIES*/
+
+@media (max-width: 991px) {
+	.logo {
+		width: 350px;
+	}
+	h1 {
+		font-size: 35px;
+		line-height: 50px;
+		margin: 15px 0;
+	}
+	h2 {
+		font-size: 35px;
+	}
+	.features [class*="col-"]:not(:first-child) {
+		margin-top: 30px;
+	}
+	.snarkquotes [class*="col-"]:not(:first-child) {
+		margin-top: 40px;
+	}
+	.breath {
+		margin: 30px auto;
+	}
+}
+
+@media (max-width: 767px) {
+	.logo {
+		width: 300px;
+	}
+	h1 {
+		font-size: 30px;
+		line-height: 40px;
+	}
+	h2 {
+		font-size: 30px;
+		line-height: 40px;
+	}
+	.masthead {
+		padding: 40px 15px;
+	}
+}
+
+@media (max-width: 480px) {
+	/*Media Queries for smaller devices*/
+	.logo {
+		width: 250px;
+	}
+	.masthead {
+		background-attachment: scroll;
+	}
+}

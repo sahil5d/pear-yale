@@ -1,0 +1,282 @@
+$deepblue: #031c2f;
+$midnightblue: #2c3e50;
+$offwhite: #eeeeee;
+$flatred: #e74c3c;
+$flatpurple: #8e44ad;
+$flatblue: #2980b9;
+$flatorange: #d35400;
+$flatgreen: #87d37c;
+
+$concretegray: #7f8c8d;
+$densegray: #384047;
+$chillgray: #3d596e;
+$chillergray: #6a8090;
+$chillestgray: #b2c3c7;
+
+$lightgreen: #91e691;
+$emeraldgreen: #2ecc71;
+
+$pureheaderheight: 49px;
+
+.pure-u-1.flexchooser {
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-flow: row wrap;
+	flex-flow: row wrap;
+	-webkit-justify-content: center;
+	justify-content: center;
+}
+
+.flexmaster {
+	-webkit-display: flex;
+	display: flex;
+	-webkit-flex-flow: row wrap;
+	flex-flow: row wrap;
+	-webkit-justify-content: space-around;
+	justify-content: space-around;
+	&.flexup {
+		-webkit-align-items: flex-start;
+		align-items: flex-start;
+	}
+}
+
+table {
+	margin: 5px;
+}
+
+.flexbreak {
+	-webkit-flex: 1 100%;
+	flex: 1 100%;
+}
+
+hr {
+	border: 0;
+	height: 1px;
+	background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0));
+	background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0));
+	background-image: -ms-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0));
+	background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0));
+}
+
+#commons-note {
+	font-style: italic;
+	font-size: 90%;
+	margin: 2px 0 -15px 0;
+}
+
+.button-time, .button-places, .button-place {
+	color: #fff;
+	width: 100px;
+	margin: 5px;
+	// box-shadow: none;
+	padding-left: 1px;
+	padding-right: 1px;
+	input {
+		display: none;
+	}
+	//to overwrite my pure btn shadows3
+	&.pure-button-active {
+		box-shadow: 4px 0 0 rgba(0, 0, 0, 0.7) inset, -4px 0 0 rgba(0, 0, 0, 0.7) inset, 0 0 10px rgba(0, 0, 0, 0.7) inset;
+	}
+}
+
+.button-time {
+	background: $flatblue;
+}
+
+.button-places {
+	background: $flatorange;
+}
+
+.button-place {
+	background: $flatgreen;
+}
+
+/* transition for containers to push in/out */
+#pick-layout,
+#pick-menu,
+.pick-menu-link {
+	-webkit-transition: all 0.2s ease-out;
+	-moz-transition: all 0.2s ease-out;
+	-ms-transition: all 0.2s ease-out;
+	-o-transition: all 0.2s ease-out;
+	transition: all 0.2s ease-out;
+}
+
+li.weekday, li.weekday a {
+	-webkit-transition: all 0.1s ease-out;
+	-moz-transition: all 0.1s ease-out;
+	-ms-transition: all 0.1s ease-out;
+	-o-transition: all 0.1s ease-out;
+	transition: all 0.1s ease-out;
+}
+
+/* parent div of menu and content */
+#pick-layout {
+	position: relative;
+	padding-left: 0;
+}
+
+#pick-layout.active {
+	position: relative;
+	left: 150px;
+}
+
+#pick-layout.active #pick-menu {
+	left: 150px;
+	width: 150px;
+}
+
+#pick-layout.active .pick-menu-link {
+	left: 150px;
+}
+
+#pick-menu {
+	margin-left: -150px;
+	/* "#menu" width */
+	width: 150px;
+	position: fixed;
+	top: $pureheaderheight;
+	left: 0;
+	bottom: 0;
+	z-index: 1;
+	/* old val 1000 so menu/navicon stays abve all content */
+	background: $concretegray;
+	/* box-shadow: 1px 1px 1px rgba(0,0,0, 0.5); */
+	overflow-y: auto;
+	-webkit-overflow-scrolling: touch;
+}
+
+#pick-menu a {
+	color: $offwhite;
+	border: none;
+	padding: 0.6em 0 0.6em 0.6em;
+}
+
+#pick-menu .pure-menu,
+#pick-menu .pure-menu ul {
+	border: none;
+	background: transparent;
+}
+
+/* light border above ul, below menu title */
+#pick-menu .pure-menu ul {
+	/* border-top: 1px solid $densegray; */
+}
+
+#pick-menu .pure-menu li a:hover,
+#pick-menu .pure-menu li a:focus {
+	background: $midnightblue;
+}
+
+/* styles the selected item li */
+#pick-menu .pure-menu-selected,
+#pick-menu .pure-menu-heading {
+	background: $midnightblue;
+}
+
+/* styles a link within a selected item li */
+#pick-menu .pure-menu-selected a {
+	color: $lightgreen;
+}
+
+/* styles menu heading */
+#pick-menu .pure-menu-heading {
+	font-size: 110%;
+	color: $offwhite;
+	margin: 0;
+}
+
+#pick-menu a {
+	padding-left: 20px;
+}
+
+/* `.menu-link` is responsive menu toggle that shows/hides on small screens */
+.pick-menu-link {
+	position: fixed;
+	display: block;
+	/* show this only on small screens */
+	top: $pureheaderheight;
+	left: 0;
+	/* "#menu width" */
+	background: #000;
+	background: rgba(0, 0, 0, 0.7);
+	font-size: 10px;
+	/* change this value to increase/decrease button size */
+	z-index: 3;
+	width: 44px;
+	padding: 1.8em 1.2em;
+}
+
+.pick-menu-link:hover,
+.pick-menu-link:focus {
+	background: #000;
+}
+
+.pick-menu-link span {
+	position: relative;
+	display: block;
+}
+
+.pick-menu-link span,
+.pick-menu-link span:before,
+.pick-menu-link span:after {
+	background-color: #fff;
+	width: 100%;
+	height: 0.2em;
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+}
+
+.pick-menu-link span:before,
+.pick-menu-link span:after {
+	position: absolute;
+	margin-top: -0.6em;
+	content: " ";
+}
+
+.pick-menu-link span:after {
+	margin-top: 0.6em;
+}
+
+@media (min-width: 48em) {
+	/* hides the menu at `48em` */
+	#pick-layout {
+		padding-left: 150px;
+		/* left col width "#menu" */
+		left: 0;
+	}
+	#pick-menu {
+		left: 150px;
+	}
+	.pick-menu-link {
+		position: fixed;
+		left: 150px;
+		display: none;
+	}
+	#pick-layout.active .pick-menu-link {
+		left: 150px;
+	}
+}
+
+@media (max-width: 48em) {
+	.pad-up-case {
+		margin-top: 30px;
+	}
+	/* reveal sandwich small newlines */
+	hr.noshow {
+		display: -webkit-flex !important;
+		display: flex !important;
+		margin: 10px 0;
+	}
+	.button-time, .button-places, .button-place {
+		width: 90px;
+		margin: 2px;
+	}
+	/* large category fonts */
+	// #d1P0, #d2P0, #d3P0, #d4P0, #d5P0,  {
+	//    font-size: 85%;
+	//    padding-top: 8px;
+	// }
+}

@@ -1,0 +1,24 @@
+<!-- menu toggle -->
+<a href="#pick-menu" id="pick-menuLink" class="pick-menu-link">
+	<!-- hamburger icon -->
+	<span></span>
+</a>
+
+<div id="pick-menu">
+	<div class="pure-menu pure-menu-open">
+		<!-- <a class="pure-menu-heading" href="#">titlee</a> -->
+
+		<ul>
+
+			<!-- ids d1 to d5 but starting with today -->
+			<% 5.times do |i| %>
+				<li class="weekday">
+					<a href="" class="" id="<%='d' + @next5days[i].to_s%>">
+						<%=@next5names[i]%>
+					</a>
+				</li>
+			<%end%>
+
+		</ul>
+	</div>
+</div>

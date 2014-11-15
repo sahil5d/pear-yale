@@ -1,0 +1,79 @@
+<% provide(:title, 'planner') %>
+
+<div class="pad-header"></div>
+
+<div id="pick-layout">
+
+	<%= render 'menu' %>
+
+	<div class="pure-g">
+		<h2 class="pure-u-1 is-center pad-down animated flipInX">
+			choose <em>when</em> and <em>where</em> you're free</h2>
+
+		<%=form_tag({controller: "openings", action: "create"}, method:"post",
+									class: "pure-u-1",) do%>
+
+		<!-- submit button -->
+		<div class="pure-u-1 is-center">
+			<button class="pure-button pure-button-primary iconright">submit<i class="fa fa-angle-right"></i></button></div>
+
+		<!-- line -->
+		<hr class="pure-u-1">
+
+		<!-- assert: for inputs, id=name+value -->
+		
+		<div class="flexmaster flexup">
+
+		<!-- ids c1 to c5, no order because noshow -->
+		<% 5.times do |i| %>
+		<div class="pure-u-1 pure-u-lg-1-2 flexchooser noshow animated fadeIn"
+			 id="<%="c#{i+1}"%>">
+			<!-- ids d_t0 to d_t7 for times -->
+			<% @timenames.length.times do |j| %>
+				<div class='pure-button button-time'>
+					<input	type='checkbox' id="<%="d#{i+1}t#{j}"%>"
+									name="<%="d#{i+1}t[]"%>" value="<%=j%>">
+					<%= @timenames[j] %>	</div>	<% end %>
+
+			<p id="commons-note" class="pure-u-1 is-center">*only commons</p>
+			
+			<!-- line -->
+			<hr class="pure-u-1">
+
+			<% @placenames.length.times do |j| %>
+				<!-- ids d_P0 to d_P3 for button-places -->
+				<% if (jj = @placesids.index(j)) %>
+					<div class='flexbreak'></div> <!-- newline -->
+					<div class='pure-button button-places' id="<%="d#{i+1}P#{jj}"%>">
+						<%= @placesnames[jj] %> </div> <% end %> <!-- end if -->
+
+				<!-- ids d_p0 to d_p12 for button-place -->
+				<div class='pure-button button-place'>
+						<input	type='checkbox' id="<%="d#{i+1}p#{j}"%>"
+										name="<%="d#{i+1}p[]"%>" value="<%=j%>">
+						<%= @placenames[j] %>	</div>
+
+				<!-- sandwich small newlines on small screens -->
+				<% if @placesids.index(j+1) %>
+					<div class='flexbreak'></div> <!-- newline -->
+					<div class="pure-u-1-3"></div>
+						<hr class="pure-u-1-3 noshow">
+					<div class="pure-u-1-3"></div>
+				<% end %> <% end %> <!-- end do -->
+
+		</div> <!-- flexchooser end -->
+		<% end %> <!-- 5 times end -->
+
+		<div class="pure-u-1 pure-u-lg-5-12 pad-down pad-up-case">
+			<img class="pure-img shadow-light" src="<%= asset_path 'map6.png' %>">
+		</div>
+
+		</div> <!-- end flexmaster -->
+
+		<% end %> <!-- form end -->
+
+		<p id="<%=@eo%>" class="is-center noshow eo"></p>
+
+	</div> <!-- pure-g end -->
+</div> <!-- layout end -->
+

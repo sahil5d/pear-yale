@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+
+	<style type="text/css">
+		body { font-family: 'Trebuchet MS', 'Times New Roman'; }
+	</style>
+</head>
+
+<body>
+	<h1>you've been peared!</h1>
+
+	<h3>people</h3>
+	<p>
+		<%=@user1.fname.downcase%> – <%=@user1.email%><br>
+		<%=@user2.fname.downcase%> – <%=@user2.email%>
+	</p>
+
+	<h3>place</h3>
+	<p>
+		<%=@opening.place%>
+	</p>
+
+	<h3>ptime | the p is silent</h3>
+	<p>
+		<%=@opening.date_time.strftime("%a %-m/%-d at %l:%M").downcase%>
+	</p>
+
+</body>
+
+</html>

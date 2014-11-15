@@ -1,0 +1,40 @@
+<% provide(:title, 'openings') %>
+
+<div class="pad-header"></div>
+
+<div class="pure-g">
+	<h2 class="pure-u-1 is-center pad-down animated flipInX">
+		your openings</h2>
+
+	<!-- submit button -->
+	<div class="pure-u-1 is-center">
+		<a href='/planner' class="pure-button pure-button-primary back-color iconleft"><i class="fa fa-angle-left"></i>edit</a>
+		<a href='/finish' class="pure-button pure-button-primary iconright">finish<i class="fa fa-angle-right"></i></a>
+	</div>
+
+	<!-- line -->
+	<hr class="pure-u-1">
+
+	<!-- tables -->
+	<div class="pure-u-1 animated fadeIn flexmaster">
+		<% 5.times do |i| %>
+			<table class="pure-table pure-table-horizontal">
+					<thead>
+							<tr>
+									<th><%= @next5names[i]%></th> <th>place</th> </tr> </thead>
+					<tbody>
+						<% if @eoc[i].length == 0 %>
+						<tr>	
+								<td>–</td> <td>–</td> </tr> <% end %>
+							
+							<% @eoc[i].length.times do |j| %>
+							<tr>
+									<td><%= @eoc[i][j][0] %></td>
+									<td><%= @eoc[i][j][1] %></td> </tr> <% end %> </tbody>
+			</table>
+		<% end %>
+	</div>
+
+	<!-- <img class="pure-img shadow-light" src="<%#=asset_path 'paint2.jpg' %>"> -->
+
+</div> <!-- pure-g end -->

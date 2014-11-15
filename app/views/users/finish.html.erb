@@ -1,0 +1,39 @@
+<% provide(:title, "finish")%>
+
+<div class="pad-header"></div>
+
+<div class="pure-g animated fadeIn">
+	<h2 class="pure-u-1 is-center animated flipInX">
+		thanks <%=@user.fname.downcase if @user.fname %>!
+	</h2>
+
+	<div class="pure-u-1 is-center pad-down"></div>
+	
+	<div id="bookmark" class="pure-u-1 is-center pad-down animated rubberBand noshow">
+		<h3>bookmark <em>pear</em></h3>
+		<p>on your laptop – <code>ctrl-D</code><br>
+			on your phone – <code>bookmarks: add to homescreen</code></p>
+	</div>
+
+	<div class="pure-u-1-6"></div>
+	<div class="pure-u-2-3">
+		<div class="pure-u-1 pure-u-md-1-2">
+			<h4>couple more things –</h4>
+			<br>
+			<p>the evening before your next lunch, <em>pear</em> will send you an email with the who, when, and where</p>
+			<p><em>pear</em> sends emails out at 7pm, so that's the cutoff for planning tomorrow's lunch. feel free to change your openings up until then</p>
+			<p><em>pear</em> can't ensure a match, but makes the most lunches possible given everyone's openings</p>
+			<p>happy lunching! and in case <a id="chicken" href="http://www.isitchickentendersday.com/" target="_blank"><em>you're curious...</em></a></p>
+		</div>
+		<div class="pure-u-1 pure-u-md-1-24"></div>
+		<div class="pure-u-1 pure-u-md-5-12">
+			<img class="pure-img shadow-light" src="<%=asset_path 'paint3.jpg' %>">
+		</div>
+	</div>
+	<div class="pure-u-1-6"></div>
+
+	<div class="pure-u-1 is-center pad-up">
+		<iframe src="//www.facebook.com/plugins/share_button.php?href=http%3A%2F%2Fwww.pearyale.com%2F&amp;width=60&amp;layout=button" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:60px;height:50px;" allowTransparency="true"></iframe>
+	</div>
+
+</div>
